@@ -4,15 +4,16 @@ import { motion } from 'framer-motion'
 
 const Navbar = () => {
 
-    const [activeMenu, setActiveMenu] = useState(false)
+    const [activeMenu, setActiveMenu] = useState(true)
     const [screenSize, setScreenSize] = useState(null)
 
     useEffect(() => {
         const handleResize = () => setScreenSize(window.innerWidth)
+
         window.addEventListener('resize', handleResize)
         handleResize()
         return () => window.removeEventListener('resize', handleResize)
-    }, [setScreenSize])
+    }, [])
 
     useEffect(() => {
         if (screenSize <= 768) {
@@ -43,7 +44,7 @@ const Navbar = () => {
                     initial={{ y: '-100vh', opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ type: 'spring', stiffness: 50 }}
-                    className='flex flex-col md:flex-row justify-center md:justify-end h-screen md:h-fit items-center absolute md:relative top-28 md:top-0 space-x-16 bg-[#5c6b87] w-[100%] left-0 right-0 md:bg-inherit'>
+                    className='flex flex-col md:flex-row justify-center md:justify-end h-screen md:h-fit items-center absolute md:relative top-28 md:top-0 z-10 space-x-16 bg-[#5c6b87] w-[100%] left-0 right-0 md:bg-inherit'>
                     <nav className='flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-16 '>
                         {links.map((link) => (
                             <a key={link.name} className='hover:border-b border-[#3671E9]' href={link.link}>{link.name}</a>

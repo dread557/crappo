@@ -15,8 +15,6 @@ const Advert = () => {
     useEffect(() => {
         if (inView) {
             animate.start('visible')
-        } else {
-            animate.start('hidden')
         }
     }, [inView, animate])
 
@@ -120,39 +118,39 @@ const Advert = () => {
                     </motion.div>
                 </div>
                 <div className='flex justify-center flex-col items-center mt-24'>
-                    <h2 data-aos="fade-up" data-aos-duration="500" className='text-4xl font-bold mb-6'>Check how much you can earn</h2>
-                    <p data-aos="fade-up" data-aos-duration="1000" className='md:w-[40%] md:text-center'>Let's check your hash rate to see how much you
+                    <h2 data-aos="fade-up" data-aos-duration="400" className='text-4xl font-bold mb-6'>Check how much you can earn</h2>
+                    <p data-aos="fade-up" data-aos-duration="600" className='md:w-[40%] md:text-center'>Let's check your hash rate to see how much you
                         will earn today, Exercitation veniam consequat
                         sunt nostrud amet.</p>
                 </div>
             </div>
             <div className='flex flex-col items-center bg-[#edecec] relative p-12 pt-[19rem]'>
                 <div data-aos="zoom-in-up" className='md:w-[900px] bg-white rounded-[32px] flex flex-col p-7 absolute top-[-10%] md:top-[-15%] ml-8 mr-8'>
-                    <form data-aos="fade-up" data-aos-duration="1000" className='flex flex-col md:flex-row justify-between items-center space-y-7 md:space-y-0'>
+                    <form data-aos="fade-up" data-aos-duration="500" className='flex flex-col md:flex-row justify-between items-center space-y-7 md:space-y-0'>
                         <input className='border-b text-[#0D0D2B] w-full  md:w-[350px] outline-0' type='text' placeholder='Enter your hash rate' />
                         <select className='border-b w-full md:w-[200px] text-[#0D0D2B] h-9'>
                             {options.map((option) => (
                                 <option key={option.name} value={option.name}>{option.name}</option>
                             ))}
                         </select>
-                        <Button data-aos="fade-up" data-aos-duration="1000" type='submit'>Calculate</Button>
+                        <Button data-aos="fade-up" data-aos-duration="500" type='submit'>Calculate</Button>
                     </form>
                     <div className='mt-20'>
-                        <h5 data-aos="fade-up" data-aos-duration="800" className='text-[#3671E9] font-semibold'>ESTIMATED 24 HOUR REVENUE:</h5>
-                        <p data-aos="fade-up" data-aos-duration="1200" className='text-[#0D0D2B] font-bold text-3xl'>0.055 130 59 ETH <span className='text-[#3671E9]'>($1275)</span></p>
-                        <p data-aos="fade-up" data-aos-duration="1600" className='text-[#8a8a97]'>Revenue will change based on mining difficulty and Ethereum price.</p>
+                        <h5 data-aos="fade-up" data-aos-duration="400" className='text-[#3671E9] font-semibold'>ESTIMATED 24 HOUR REVENUE:</h5>
+                        <p data-aos="fade-up" data-aos-duration="600" className='text-[#0D0D2B] font-bold text-3xl'>0.055 130 59 ETH <span className='text-[#3671E9]'>($1275)</span></p>
+                        <p data-aos="fade-up" data-aos-duration="800" className='text-[#8a8a97]'>Revenue will change based on mining difficulty and Ethereum price.</p>
                     </div>
                 </div>
-                <h1 data-aos="zoom-in-down" data-aos-duration="1200" className='text-[#0D0D2B] text-3xl font-bold md:w-[40%] text-center mb-16'>Trade securely and market the high growth cryptocurrencies.</h1>
+                <h1 data-aos="zoom-in-down" data-aos-duration="500" className='text-[#0D0D2B] text-3xl font-bold md:w-[40%] text-center mb-16'>Trade securely and market the high growth cryptocurrencies.</h1>
                 <div
                     data-aos="fade-up"
                     className='flex flex-col md:flex-row md:space-x-10 mb-24 space-y-5 md:space-y-0'>
                     {cards.map((card) => (
                         <div key={card.name} className='click-style flex flex-col h-[433px] items-center text-center p-5  rounded-2xl bg-white hover:cursor-pointer'>
-                            <img data-aos="fade-up" data-aos-duration="600" className='mt-12 mb-12' src={card.logo} alt={card.name} />
-                            <h3 data-aos="fade-up" data-aos-duration="1000" className='text-[#0D0D2B] font-bold text-4xl flex space-x-8'>{card.name} <span className='text-sm text-gray-300'>{card.aka}</span></h3>
-                            <p data-aos="fade-up" data-aos-duration="1400" className='mb-6'>{card.txt}</p>
-                            <img data-aos="fade-up" data-aos-duration="1800" className='p-3 border rounded-full' src='../assets/arrow-right.svg' alt='arrow' />
+                            <img data-aos="fade-up" data-aos-duration="200" className='mt-12 mb-12' src={card.logo} alt={card.name} />
+                            <h3 data-aos="fade-up" data-aos-duration="400" className='text-[#0D0D2B] font-bold text-4xl flex space-x-8'>{card.name} <span className='text-sm text-gray-300'>{card.aka}</span></h3>
+                            <p data-aos="fade-up" data-aos-duration="600" className='mb-6'>{card.txt}</p>
+                            <img data-aos="fade-up" data-aos-duration="800" className='p-3 border rounded-full' src='../assets/arrow-right.svg' alt='arrow' />
                         </div>
                     ))}
                 </div>
