@@ -18,23 +18,23 @@ const Footer = () => {
                     <a href='#top'><img src='../assets/logo-0.svg' alt='logo' /></a>
                 </div>
                 <div className='mb-7'>
-                    <h4 data-aos="fade-up" data-aos-duration="100" className='mb-4 font-semibold'>Quick Links</h4>
+                    <h4 data-aos="fade-up" data-aos-duration="400" className='mb-4 font-semibold'>Quick Links</h4>
                     <ul className='space-y-3'>
-                        <li data-aos="fade-up" data-aos-duration="200"><a href='/'>Home</a></li>
-                        <li data-aos="fade-up" data-aos-duration="400"><a href='/'>Products</a></li>
-                        <li data-aos="fade-up" data-aos-duration="600"><a href='/'>About</a></li>
-                        <li data-aos="fade-up" data-aos-duration="800"><a href='/'>Features</a></li>
-                        <li data-aos="fade-up" data-aos-duration="900"><a href='/'>Contacts</a></li>
+                        <li data-aos="fade-up" data-aos-duration="600"><a href='/'>Home</a></li>
+                        <li data-aos="fade-up" data-aos-duration="800"><a href='/'>Products</a></li>
+                        <li data-aos="fade-up" data-aos-duration="1000"><a href='/'>About</a></li>
+                        <li data-aos="fade-up" data-aos-duration="1200"><a href='/'>Features</a></li>
+                        <li data-aos="fade-up" data-aos-duration="1400"><a href='/'>Contacts</a></li>
                     </ul>
                 </div>
                 <div className='mb-7'>
-                    <h4 data-aos="fade-up" data-aos-duration="100" className='mb-4 font-semibold'>Resources</h4>
+                    <h4 data-aos="fade-up" data-aos-duration="400" className='mb-4 font-semibold'>Resources</h4>
                     <ul className='space-y-3'>
-                        <li data-aos="fade-up" data-aos-duration="200"><a href='/'>Download Whitepaper</a></li>
-                        <li data-aos="fade-up" data-aos-duration="400"><a href='/'>Smart Team</a></li>
-                        <li data-aos="fade-up" data-aos-duration="600"><a href='/'>Blockchain Explorer</a></li>
-                        <li data-aos="fade-up" data-aos-duration="800"><a href='/'>Crypto API</a></li>
-                        <li data-aos="fade-up" data-aos-duration="900"><a href='/'>Interest</a></li>
+                        <li data-aos="fade-up" data-aos-duration="600"><a href='/'>Download Whitepaper</a></li>
+                        <li data-aos="fade-up" data-aos-duration="800"><a href='/'>Smart Team</a></li>
+                        <li data-aos="fade-up" data-aos-duration="1000"><a href='/'>Blockchain Explorer</a></li>
+                        <li data-aos="fade-up" data-aos-duration="1200"><a href='/'>Crypto API</a></li>
+                        <li data-aos="fade-up" data-aos-duration="1400"><a href='/'>Interest</a></li>
                     </ul>
                 </div>
                 <div className='flex flex-col space-y-5 mb-7'>
