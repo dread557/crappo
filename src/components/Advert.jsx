@@ -27,7 +27,7 @@ const Advert = () => {
     const containerVariants = {
         hidden: {
             opacity: 0,
-            x: '100vw'
+            x: '-100vw'
         },
         visible: {
             opacity: 1,
