@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from './Button'
 import { motion, useAnimation } from 'framer-motion'
 import AOS from 'aos'
@@ -11,6 +11,16 @@ const Advert = () => {
         threshold: 0.3
     })
     const animate = useAnimation()
+
+    const [selected, setSelected] = useState("BTC");
+
+
+    // useEffect(() => {
+    //     cardRef.current.addEventListener('click', () => {
+    //         setClicked(!clicked)
+    //         console.log(true)
+    //     })
+    // }, [clicked])
 
     useEffect(() => {
         if (inView) {
@@ -65,27 +75,27 @@ const Advert = () => {
         { name: 'GH/s' },
     ]
 
-    const cards = [
-        {
-            logo: '../assets/btc.png',
-            name: 'Bitcoin',
-            aka: 'BTC',
-            txt: 'Digital currency in which a record of transactions is maintained.'
-        },
-        {
-            logo: '../assets/eth.png',
-            name: 'Ethereum',
-            aka: 'ETH',
-            txt: 'Blockchain technology to create and run decentralized digital applications..'
-        },
-        {
-            logo: '../assets/ltc.png',
-            name: 'Litecoin',
-            aka: 'LTC',
-            txt: 'Cryptocurrency that enables instant payments to anyone in the world.'
-        },
+    // const cards = [
+    //     {
+    //         logo: '../assets/btc.png',
+    //         name: 'Bitcoin',
+    //         aka: 'BTC',
+    //         txt: 'Digital currency in which a record of transactions is maintained.'
+    //     },
+    //     {
+    //         logo: '../assets/eth.png',
+    //         name: 'Ethereum',
+    //         aka: 'ETH',
+    //         txt: 'Blockchain technology to create and run decentralized digital applications..'
+    //     },
+    //     {
+    //         logo: '../assets/ltc.png',
+    //         name: 'Litecoin',
+    //         aka: 'LTC',
+    //         txt: 'Cryptocurrency that enables instant payments to anyone in the world.'
+    //     },
 
-    ]
+    // ]
     return (
         <section>
             <div className='flex p-12 flex-col pb-64'>
@@ -142,17 +152,46 @@ const Advert = () => {
                     </div>
                 </div>
                 <h1 data-aos="zoom-in-down" data-aos-duration="500" className='text-[#0D0D2B] text-3xl font-bold md:w-[40%] text-center mb-16'>Trade securely and market the high growth cryptocurrencies.</h1>
-                <div
-                    data-aos="fade-up"
-                    className='flex flex-col md:flex-row md:space-x-10 mb-24 space-y-5 md:space-y-0'>
-                    {cards.map((card) => (
-                        <div key={card.name} className='click-style flex flex-col h-[433px] items-center text-center p-5  rounded-2xl bg-white hover:cursor-pointer'>
-                            <img data-aos="fade-up" data-aos-duration="200" className='mt-12 mb-12' src={card.logo} alt={card.name} />
-                            <h3 data-aos="fade-up" data-aos-duration="400" className='text-[#0D0D2B] font-bold text-4xl flex space-x-8'>{card.name} <span className='text-sm text-gray-300'>{card.aka}</span></h3>
-                            <p data-aos="fade-up" data-aos-duration="600" className='mb-6'>{card.txt}</p>
-                            <img data-aos="fade-up" data-aos-duration="800" className='p-3 border rounded-full' src='../assets/arrow-right.svg' alt='arrow' />
-                        </div>
-                    ))}
+                <div data-aos="fade-up" className='flex flex-col md:flex-row md:space-x-10 mb-24 space-y-5 md:space-y-0'>
+                    <div onClick={() => {
+                        setSelected("BTC")
+                    }}
+                        className={selected === "BTC" ? 'pcard-bg flex flex-col h-[433px] items-center text-center p-5  rounded-2xl bg-white hover:cursor-pointer' : 'flex flex-col h-[433px] items-center text-center p-5  rounded-2xl bg-white hover:cursor-pointer'}>
+                        <img data-aos="fade-up" data-aos-duration="200" className='mt-12 mb-12' src='../assets/btc.png' alt='' />
+                        <h3 data-aos="fade-up" data-aos-duration="400" className='text-[#0D0D2B] font-bold text-4xl flex space-x-8'>Bitcoin <span className='text-sm text-gray-300'>BTC</span></h3>
+                        <p data-aos="fade-up" data-aos-duration="600" className='mb-6'>Digital currency in which a record of transactions is maintained.</p>
+                        <div className='h-[64px] pcard-btn mt-6 w-[202px] p-4 bg-[#3671E9] rounded-[32px] flex items-center justify-evenly' tabIndex='0' role='button' >
+                            Start mining <span className='bg-white rounded-full'>
+                                <img src='../assets/arrow-right.svg' alt='arrow' />
+                            </span></div>
+                        <img data-aos="fade-up" data-aos-duration="800" className='p-3 pcard-arrow border rounded-full' src='../assets/arrow-right.svg' alt='arrow' />
+                    </div>
+                    <div onClick={() => {
+                        setSelected("ETH")
+                    }}
+                        className={selected === "ETH" ? 'pcard-bg flex flex-col h-[433px] items-center text-center p-5  rounded-2xl bg-white hover:cursor-pointer' : 'flex flex-col h-[433px] items-center text-center p-5  rounded-2xl bg-white hover:cursor-pointer'}>
+                        <img data-aos="fade-up" data-aos-duration="200" className='mt-12 mb-12' src='../assets/eth.png' alt='' />
+                        <h3 data-aos="fade-up" data-aos-duration="400" className='text-[#0D0D2B] font-bold text-4xl flex space-x-8'>Ethereum<span className='text-sm text-gray-300'>ETH</span></h3>
+                        <p data-aos="fade-up" data-aos-duration="600" className='mb-6'>Blockchain technology to create and run decentralized digital applications..</p>
+                        <div className='h-[64px] pcard-btn mt-6 w-[202px] p-4 bg-[#3671E9] rounded-[32px] flex items-center justify-evenly' tabIndex='0' role='button' >
+                            Start mining <span className='bg-white rounded-full'>
+                                <img src='../assets/arrow-right.svg' alt='arrow' />
+                            </span></div>
+                        <img data-aos="fade-up" data-aos-duration="800" className='p-3 pcard-arrow border rounded-full' src='../assets/arrow-right.svg' alt='arrow' />
+                    </div>
+                    <div onClick={() => {
+                        setSelected("LTC")
+                    }}
+                        className={selected === "LTC" ? 'pcard-bg flex flex-col h-[433px] items-center text-center p-5  rounded-2xl bg-white hover:cursor-pointer' : 'flex flex-col h-[433px] items-center text-center p-5  rounded-2xl bg-white hover:cursor-pointer'}>
+                        <img data-aos="fade-up" data-aos-duration="200" className='mt-12 mb-12' src='../assets/Ltc.png' alt='' />
+                        <h3 data-aos="fade-up" data-aos-duration="400" className='text-[#0D0D2B] font-bold text-4xl flex space-x-8'>Litecoin <span className='text-sm text-gray-300'>LTC</span></h3>
+                        <p data-aos="fade-up" data-aos-duration="600" className='mb-6'>Cryptocurrency that enables instant payments to anyone in the world.</p>
+                        <div className='h-[64px] pcard-btn mt-6 w-[202px] p-4 bg-[#3671E9] rounded-[32px] flex items-center justify-evenly' tabIndex='0' role='button' >
+                            Start mining <span className='bg-white rounded-full'>
+                                <img src='../assets/arrow-right.svg' alt='arrow' />
+                            </span></div>
+                        <img data-aos="fade-up" data-aos-duration="800" className='p-3 pcard-arrow border rounded-full' src='../assets/arrow-right.svg' alt='arrow' />
+                    </div>
                 </div>
             </div>
         </section>

@@ -21,10 +21,22 @@ p {
     width: max-content;
 }
 
-.click-style:first-child {
+.pcard-bg {
     background: #2B076E;
 }
 
-.click-style:first-child h3 {
-       color: #fff
+.pcard-bg h3 {
+    color: #fff;
+}
+
+.pcard-btn {
+    display: none;
+}
+
+.pcard-bg .pcard-arrow {
+    display: none;
+}
+
+.pcard-bg .pcard-btn {
+    display: block;
 }
